@@ -2,6 +2,8 @@ import pymem
 import pymem.process
 from pymem.exception import MemoryReadError
 
+from offsets import Offsets
+
 
 def main():
     pm = pymem.Pymem("Northgard.exe")
@@ -11,7 +13,7 @@ def main():
     keys = []
     values = []
 
-    byte = pm.read_bytes(0x76CA9F4EBDA2 + 0x2, 8)
+    byte = pm.read_bytes(Offsets.base + 0x2, 8)
     static_offset = int.from_bytes(byte, byteorder='little')
     unk1 = pm.read_longlong(static_offset)
     unk2 = pm.read_longlong(unk1 + 0x40)
