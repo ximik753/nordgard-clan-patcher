@@ -27,22 +27,22 @@ def main():
         unk9 = pm.read_longlong(unk8 + 0x130)
         unk10 = pm.read_longlong(unk9 + 0x10)
 
-        for i in range(135):
+        for i in range(110):
             try:
                 unk11 = pm.read_longlong(unk10 + i * 0x8 + 0x18)
                 unk12 = pm.read_longlong(unk11 + 0x138)
                 unk13 = pm.read_longlong(unk12 + 0x18)
                 unk14 = pm.read_longlong(unk13 + 0x18)
-                unk15 = pm.read_longlong(unk14 + 0x308)
-                unk16 = pm.read_longlong(unk15 + 0x230)
+                unk15 = pm.read_longlong(unk14 + 0x318)
+                unk16 = pm.read_longlong(unk15 + 0x240)
                 unk17 = pm.read_longlong(unk16 + 0x18)
-                unk18_val = pm.read_longlong(unk17 + 0x2A8)
+                unk18_val = pm.read_longlong(unk17 + 0x2B8)
                 unk19_val = pm.read_longlong(unk18_val + 0x8)
                 unk20_val = pm.read_longlong(unk19_val + 0x10)
-                unk21_val = pm.read_longlong(unk20_val + selected_clan * 8 + 0x18)
+                unk21_val = pm.read_longlong(unk20_val + selected_clan * 0x8 + 0x18)
                 values.append(unk21_val)
 
-                unk18 = pm.read_longlong(unk17 + 0x2C0)
+                unk18 = pm.read_longlong(unk17 + 0x2D0)
                 unk19 = pm.read_longlong(unk18 + 0x18)
                 unk20 = pm.read_longlong(unk19 + 0x18)
                 unk21 = pm.read_longlong(unk20 + 0x10)
